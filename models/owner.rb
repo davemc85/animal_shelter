@@ -1,4 +1,5 @@
 require_relative('../db/sql_runner.rb')
+require('pry-byebug')
 
 class Owner
 
@@ -13,6 +14,10 @@ class Owner
     @has_outside_space = options['has_outside_space']
     @likes_exercise = options['likes_exercise']
 
+  end
+
+  def full_name()
+    return "#{@first_name} #{@last_name}"
   end
 
 

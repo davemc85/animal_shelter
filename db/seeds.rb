@@ -63,7 +63,7 @@ animal1 = Animal.new({
   "child_friendly" => "true",
   "needs_outside_space" => "true",
   "needs_exercise" => "true",
-  "profile_pic" => "https://scontent-lht6-1.xx.fbcdn.net/v/t1.0-9/46341014_1151414971687660_2191018918275973120_n.jpg?_nc_cat=106&_nc_ht=scontent-lht6-1.xx&oh=cda18886a6f127d8b11e828e1670a1aa&oe=5D478DB1",
+  "profile_pic" => "https://scontent-lht6-1.xx.fbcdn.net/v/t1.0-9/39124588_1092251580937333_3276068274474844160_n.jpg?_nc_cat=107&_nc_ht=scontent-lht6-1.xx&oh=184040cde3f6370d67c730f130f2bf59&oe=5D2E64B5",
   "owner_id" => owner2.id
   })
 animal1.save()
