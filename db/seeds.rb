@@ -134,7 +134,7 @@ animal5.save()
 
 
 animal6 = Animal.new({
-  "name" => "Buster",
+  "name" => "Slippy",
   "admission_date" => "12/03/19",
   "type" => "snake",
   "breed" => "corn",

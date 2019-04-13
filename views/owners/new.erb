@@ -1,3 +1,47 @@
-<form class="" action="index.html" method="post">
+<h1>Add a new owner</h1>
+
+<form action="/owners" method="post">
+
+  <div class="">
+    <label for="first_name">First Name: </label>
+    <input type="text" name="first_name" id="first_name">
+  </div>
+
+  <div class="">
+    <label for="last_name">Last Name: </label>
+    <input type="text" name="last_name" id="last_name">
+  </div>
+
+  <div class="">
+    <label for="location">Location: </label>
+    <input type="text" name="location" id="location">
+  </div>
+
+  <table>
+    <tr>
+      <th></th>
+      <th>Yes</th>
+      <th>No</th>
+    </tr>
+    <tr>
+      <td><label for="has_children">Are they looking for a child friendly pet? </label></td>
+      <td><input type="radio" name="has_children" value="true"></td>
+      <td><input type="radio" name="has_children" value="false"></td>
+    </tr>
+    <tr>
+      <td><label for="has_outside_space">Do they have an outdoor area for the animal? </label></td>
+      <td><input type="radio" name="has_outside_space" value="true"></td>
+      <td><input type="radio" name="has_outside_space" value="false"></td>
+    </tr>
+    <tr>
+      <td><label for="likes_exercise">Are you looking for a animal that needs attention? </label></td>
+      <td><input type="radio" name="likes_exercise" value="true"></td>
+      <td><input type="radio" name="likes_exercise" value="false"></td>
+    </tr>
+  </table>
+
+  <div class="">
+    <input type="submit" value="Add owner"/>
+  </div>
 
 </form>

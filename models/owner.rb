@@ -1,4 +1,5 @@
 require_relative('../db/sql_runner.rb')
+require_relative('animal.rb')
 require('pry-byebug')
 
 class Owner
@@ -17,7 +18,7 @@ class Owner
   end
 
   def full_name()
-    return "#{@first_name} #{@last_name}"
+    return "#{@first_name.capitalize} #{@last_name.capitalize}"
   end
 
 

@@ -1,9 +1,11 @@
 require_relative('../db/sql_runner.rb')
+require_relative( 'owner.rb')
 require('pry-byebug')
 
 class Animal
 
-  attr_reader :id, :name, :admission_date, :type, :breed, :age, :status, :child_friendly, :needs_outside_space, :needs_exercise, :profile_pic, :owner_id
+  attr_accessor :owner_id
+  attr_reader :id, :name, :admission_date, :type, :breed, :age, :status, :child_friendly, :needs_outside_space, :needs_exercise, :profile_pic
 
   def initialize( options )
     @id = options['id'].to_i if options['id']
@@ -60,7 +62,7 @@ class Animal
     SqlRunner.run(sql, values)
   end
 
-  
+
 
   def kid_friendly
     if @child_friendly == "t"
@@ -80,7 +82,7 @@ class Animal
 
   def exercise
     if @needs_exercise == "t"
-      "I need lots of attention and a chance to play"
+      "I need lots of attention and love to play"
     else
       "I can keep myself amused"
     end

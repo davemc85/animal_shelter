@@ -1,0 +1,89 @@
+<h1>Add a new animal</h1>
+
+<form class="form-wrapper" action="/animals" method="post">
+
+
+  <div class="form-el">
+    <label for="name">Name: </label>
+    <input type="text" name="name" id="name"/>
+  </div>
+
+  <div class="form-el">
+    <label for="admission_date">Admission Date: </label>
+    <input type="text" name="admission_date" id="admission_date"/>
+  </div>
+
+  <div class="form-el">
+    <label for="type">Type: </label>
+    <input type="text" name="type" id="type"/>
+  </div>
+
+  <div class="form-el">
+    <label for="breed">Breed: </label>
+    <input type="text" name="breed" id="breed"/>
+  </div>
+
+  <div class="form-el">
+    <label for="age">Age: </label>
+    <input type="number" name="age" id="age"/>
+  </div>
+
+  <div class="form-el">
+    <label for="status">Status: </label>
+    <select name="status" id="status">
+      <option value="Available">Available</option>
+      <option value="Currently in training">Currently in training</option>
+      <option value="Currently in vets">Currently in vets</option>
+      <option value="Adopted">Adopted</option>
+    </select>
+  </div>
+
+
+<table>
+  <tr>
+    <th></th>
+    <th>Yes</th>
+    <th>No</th>
+  </tr>
+  <tr>
+    <td><label for="child_friendly">Is the animal child friendly? </label></td>
+    <td><input type="radio" name="child_friendly" value="true"></td>
+    <td><input type="radio" name="child_friendly" value="false"></td>
+  </tr>
+  <tr>
+    <td><label for="needs_outside_space">Does the animal need space outside? </label></td>
+    <td><input type="radio" name="needs_outside_space" value="true"></td>
+    <td><input type="radio" name="needs_outside_space" value="false"></td>
+  </tr>
+  <tr>
+    <td><label for="needs_exercise">Does the animal like plenty of exercise? </label></td>
+    <td><input type="radio" name="needs_exercise" value="true"></td>
+    <td><input type="radio" name="needs_exercise" value="false"></td>
+  </tr>
+</table>
+
+<div class="form-el">
+  <label for="profile_pic">Profile picture URL: </label>
+  <input type="text" name="profile_pic" id="profile_pic"/>
+</div>
+
+<div class="form-el">
+  <label>
+  Select current owner:
+    <select name="owner_id">
+      <% for owner in @owners %>
+      <option value="<%= owner.id %>"><%= owner.full_name %></option>
+      <% end %>
+    </select>
+  </label>
+</div>
+
+
+
+
+  <div class="form-el">
+    <input type="submit" value="Add animal"/>
+  </div>
+
+
+</form>
