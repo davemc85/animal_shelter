@@ -1,3 +1,12 @@
-<p>first name: <%= @owner.first_name %></p>
-<p>last name: <%= @owner.last_name %></p>
-<p>location: <%= @owner.location %></p>
+<p>First Name: <%= @owner.first_name %></p>
+<p>Last Name: <%= @owner.last_name %></p>
+<p>Location: <%= @owner.location %></p>
+<p>Children restrictions: <%= @owner.needs_children_friendly %></p>
+<p>Outside area: <%= @owner.outdoor_space %></p>
+<p>Lifestyle: <%= @owner.owner_exercise %></p>
+
+
+<a href="/owners/<%= @owner.id %>/edit">Edit Owner</a>
+<form action="/owners/<%= @owner.id %>/delete" method="post">
+<input type="submit" value="Delete owner">
+</form>

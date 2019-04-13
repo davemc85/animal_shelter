@@ -1,0 +1,24 @@
+<h1>Animals currently in training</h1>
+
+<table>
+  <tr>
+    <th>name</th>
+    <th>type</th>
+    <th>breed</th>
+    <th>admission date</th>
+    <th>status</th>
+    <th></th>
+  </tr>
+
+    <% @animals.each do |animal| %>
+    <tr>
+      <td><%= animal.name %></td>
+      <td><%= animal.type %></td>
+      <td><%= animal.breed %></td>
+      <td><%= animal.admission_date %></td>
+      <td><%= animal.status %></td>
+      <td><a href="/animals/<%= animal.id %>">Show Animal Profile</a></td>
+    </tr>
+    <% end %>
+
+</table>

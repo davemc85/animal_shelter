@@ -20,14 +20,42 @@ post '/animals' do
   redirect to '/animals'
 end
 
+get '/animals/available' do
+  @animals = Animal.all_available
+  erb(:"animals/available")
+end
+
+get '/animals/training' do
+  @animals = Animal.training
+  erb(:"animals/training")
+end
+
+get '/animals/vet' do
+  @animals = Animal.vet
+  erb(:"animals/vet")
+end
+
 get '/animals/:id' do
   @animal = Animal.find_by_id( params['id'])
-  erb(:"Animals/show")
+  erb(:"animals/show")
 end
 
 get '/animals/:id/edit' do
+  @owners = Owner.all()
   @animal = Animal.find_by_id(params['id'])
-  erb(:edit)
+  erb(:"animals/edit")
+end
+
+post '/animals/:id' do
+  @animal = Animal.new(params)
+  @animal.update
+  redirect to "/animals/#{params['id']}"
+end
+
+get '/animals/adopt' do
+  @animals = Animal.all_available
+  @owners = Owner.all
+  erb(:"animals/adopt")
 end
 
 

@@ -3,12 +3,13 @@
 <h1>Animals</h1>
 
 <% for animal in @animals %>
-
+<p><img style="width: 100px"src="<%= animal.profile_pic %>" ></p>
 <p>Name: <%= animal.name() %> </p>
 <p>type: <%= animal.type %> </p>
-<p><img style="width: 100px"src="<%= animal.profile_pic %>" ></p>
+<p>Admission date: <%= animal.admission_date %></p>
 <p>status: <%= animal.status %></p>
 <p><a href="/animals/<%= animal.id %>">View Animal Profile</a></p>
+<p>current owner: <%= animal.owner.full_name %></p>
 <hr>
 
 <% end %>

@@ -3,7 +3,16 @@
 <p>type: <%= @animal.type %> </p>
 <p>breed: <%= @animal.breed %> </p>
 <p>age: <%= @animal.age %> </p>
+<p>admission_date: <%= @animal.admission_date %></p>
 <p>status: <%= @animal.status %></p>
 <p>child friendly?: <%= @animal.kid_friendly %></p>
 <p>Outdoor space required?: <%= @animal.outside_space %></p>
 <p>Exercise requirements: <%= @animal.exercise %></p>
+<p>current owner: <%= @animal.owner.full_name %></p>
+
+
+
+<a href="/animals/<%= @animal.id %>/edit">Edit animal</a>
+<form action="/animals/<%= @animal.id %>/delete" method="post">
+<input type="submit" value="Delete animal">
+</form>

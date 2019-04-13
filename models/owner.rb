@@ -52,6 +52,37 @@ class Owner
     SqlRunner.run(sql, values)
   end
 
+  def needs_children_friendly
+    if @has_children == "t"
+      "I need a child friendly animal"
+    else
+      "No, I can cater for any animal"
+    end
+  end
+
+  def outdoor_space
+    if @has_outside_space == "t"
+      "I have an outside area for the animal to enjoy"
+    else
+      "Sadly, I don't have an outside area"
+    end
+  end
+
+  def owner_exercise
+    if @likes_exercise == "t"
+      "I live an active life, which an animal would enjoy"
+    else
+      "I would prefer a low maintenance animal"
+    end
+  end
+
+
+  def animals() # get all animals from one owner
+    sql = "SELECT * FROM animals WHERE owner_id = $1"
+    values = [@id]
+    results = SqlRunner.run(sql, values)
+    return results.map { |pet| Animal.new(pet)}
+  end
 
 
 end

@@ -4,8 +4,8 @@ require('pry-byebug')
 
 class Animal
 
-  attr_accessor :owner_id
-  attr_reader :id, :name, :admission_date, :type, :breed, :age, :status, :child_friendly, :needs_outside_space, :needs_exercise, :profile_pic
+  attr_reader :id
+  attr_accessor :name, :admission_date, :type, :breed, :age, :status, :child_friendly, :needs_outside_space, :needs_exercise, :profile_pic, :owner_id
 
   def initialize( options )
     @id = options['id'].to_i if options['id']
@@ -21,10 +21,6 @@ class Animal
     @profile_pic = options['profile_pic']
     @owner_id = options['owner_id'].to_i
   end
-
-
-
-
 
   def save()
     sql = "INSERT INTO animals
@@ -51,7 +47,7 @@ class Animal
   end
 
   def update()
-    sql = "UPDATE students SET (name, admission_date, type, breed, age, status, child_friendly, needs_outside_space, needs_exercise, profile_pic, owner_id) = ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) WHERE id = $12"
+    sql = "UPDATE animals SET (name, admission_date, type, breed, age, status, child_friendly, needs_outside_space, needs_exercise, profile_pic, owner_id) = ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) WHERE id = $12"
     values = [@name, @admission_date, @type, @breed, @age, @status, @child_friendly, @needs_outside_space, @needs_exercise, @profile_pic, @owner_id, @id]
     SqlRunner.run(sql, values)
   end
@@ -82,11 +78,44 @@ class Animal
 
   def exercise
     if @needs_exercise == "t"
-      "I need lots of attention and love to play"
+      "I need lots of attention and I love to play"
     else
       "I can keep myself amused"
     end
   end
+
+  def owner() # get animal info from owner id
+    sql = "SELECT * FROM owners WHERE id = $1"
+    values = [@owner_id]
+    result = SqlRunner.run(sql, values)[0]
+    return Owner.new(result)
+  end
+
+  def self.all_available
+    sql = "SELECT * FROM animals WHERE status = $1"
+    values = ["available"]
+    animals = SqlRunner.run(sql, values)
+    result = animals.map{|animal| Animal.new(animal)}
+    return result
+  end
+
+  def self.training
+    sql = "SELECT * FROM animals WHERE status = $1"
+    values = ["in training"]
+    animals = SqlRunner.run(sql, values)
+    result = animals.map{|animal| Animal.new(animal)}
+    return result
+  end
+
+  def self.vet
+    sql = "SELECT * FROM animals WHERE status = $1"
+    values = ["in vet care"]
+    animals = SqlRunner.run(sql, values)
+    result = animals.map{|animal| Animal.new(animal)}
+    return result
+  end
+
+  
 
 
 end
