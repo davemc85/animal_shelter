@@ -1,4 +1,4 @@
-<h1>Animals currently available</h1>
+<h1>Animals that have been adopted</h1>
 
 <table>
   <tr>
@@ -6,7 +6,7 @@
     <th>name</th>
     <th>type</th>
     <th>breed</th>
-    <th>admission_date</th>
+    <th>owner name</th>
     <th></th>
   </tr>
 
@@ -16,7 +16,7 @@
       <td><%= animal.name %></td>
       <td><%= animal.type %></td>
       <td><%= animal.breed %></td>
-      <td><%= animal.admission_date %></td>
+      <td><%= animal.owner.full_name %></td>
       <td><a href="/animals/<%= animal.id %>">Show Animal Profile</a></td>
     </tr>
     <% end %>

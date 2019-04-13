@@ -115,7 +115,15 @@ class Animal
     return result
   end
 
-  
+  def self.adopted
+    sql = "SELECT * FROM animals WHERE NOT owner_id = $1"
+    values = [1]
+    animals = SqlRunner.run(sql, values)
+    result = animals.map{|animal| Animal.new(animal)}
+    return result
+  end
+
+
 
 
 end

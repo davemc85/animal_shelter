@@ -35,6 +35,12 @@ get '/animals/vet' do
   erb(:"animals/vet")
 end
 
+get '/animals/adopted' do
+  @owners = Owner.all()
+  @animals = Animal.adopted
+  erb(:"animals/adopted")
+end
+
 get '/animals/:id' do
   @animal = Animal.find_by_id( params['id'])
   erb(:"animals/show")

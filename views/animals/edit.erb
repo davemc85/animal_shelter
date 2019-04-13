@@ -29,17 +29,6 @@
     <input type="number" name="age" id="age" value="<%= @animal.age %>"/>
   </div>
 
-  <div class="">
-    <label for="status">Status: </label>
-    <select name="status" id="status" selected="<%= @animal.status %>">
-      <option value="Available">Available</option>
-      <option value="Currently in training">Currently in training</option>
-      <option value="Currently in vets">Currently in vets</option>
-      <option value="Adopted">Adopted</option>
-    </select>
-  </div>
-
-
 <table>
   <tr>
     <th></th>
@@ -72,6 +61,7 @@
   <label>
   Select current owner:
     <select name="owner_id">
+      <option value="<%= @animal.owner_id%>">Please update current owner...</option>
       <% for owner in @owners %>
       <option value="<%= owner.id %>"><%= owner.full_name %></option>
       <% end %>
@@ -79,6 +69,16 @@
   </label>
 </div>
 
+<div class="">
+  <label for="status">Status: </label>
+  <select name="status" id="status">
+    <option value="<%= @animal.status%>">Please update...</option>
+    <option value="Available">Available</option>
+    <option value="Currently in training">Currently in training</option>
+    <option value="Currently in vets">Currently in vets</option>
+    <option value="Adopted">Adopted</option>
+  </select>
+</div>
 
 
 

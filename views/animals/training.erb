@@ -2,6 +2,7 @@
 
 <table>
   <tr>
+    <th></th>
     <th>name</th>
     <th>type</th>
     <th>breed</th>
@@ -12,6 +13,7 @@
 
     <% @animals.each do |animal| %>
     <tr>
+      <td><img style="width: 100px"src="<%= animal.profile_pic %>" ></td>
       <td><%= animal.name %></td>
       <td><%= animal.type %></td>
       <td><%= animal.breed %></td>
