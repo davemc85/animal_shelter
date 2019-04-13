@@ -46,6 +46,13 @@ class Owner
     return Owner.new(owner_hash_array.first())
   end
 
+  def update()
+    sql = "UPDATE owners SET (first_name, last_name, location, has_children, has_outside_space, likes_exercise) =
+    ($1, $2, $3, $4, $5, $6) WHERE id = $7"
+    values = [@first_name, @last_name, @location, @has_children, @has_outside_space, @likes_exercise, @id]
+    SqlRunner.run(sql, values)
+  end
+
   def delete()
     sql = "DELETE FROM owners WHERE id = $1"
     values = [@id]
