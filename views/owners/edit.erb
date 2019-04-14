@@ -1,4 +1,4 @@
-<h2>Update <%= @owner.full_name %></h2>
+<h2>Edit <%= @owner.full_name %></h2>
 
 <form action="/owners/<%= @owner.id %>" method="post">
 
@@ -43,7 +43,7 @@
   </table>
 
   <div class="">
-    <input type="submit" value="Update Owner Details"/>
+    <input type="submit" value="Update <%= @owner.full_name %>'s Details"/>
     <a href="/owners/<%= @owner.id %>">Cancel changes</a>
   </div>
 

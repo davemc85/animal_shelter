@@ -6,8 +6,8 @@
 <p>Breed: <%= @animal.breed %> </p>
 <p>Age: <%= @animal.age %> </p>
 <p>Admission date: <%= @animal.admission_date %></p>
-<p>Child friendly?: <%= @animal.kid_friendly %></p>
-<p>Outdoor space required?: <%= @animal.outside_space %></p>
+<p>Child friendly? <%= @animal.kid_friendly %></p>
+<p>Outdoor space required? <%= @animal.outside_space %></p>
 <p>Exercise requirements: <%= @animal.exercise %></p>
 <p>Current owner: <%= @animal.owner.full_name %></p>
 <p>Current status: <%= @animal.status %></p>
@@ -16,5 +16,5 @@
 
 <a href="/animals/<%= @animal.id %>/edit">Update <%= @animal.name%>'s details</a>
 <form action="/animals/<%= @animal.id %>/delete" method="post">
-<input type="submit" value="Delete animal">
+<input type="submit" value="Delete <%= @animal.name %>">
 </form>

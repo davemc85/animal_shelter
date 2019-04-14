@@ -3,9 +3,9 @@ require_relative('../models/animal.rb')
 require('pry-byebug')
 
 owner1 = Owner.new({
-  "first_name" => "Wanna Pet",
-  "last_name" => "Animal Shelter",
-  "location" => "Glasgow",
+  "first_name" => "Wanna",
+  "last_name" => "Pet",
+  "location" => "Animal Shelter",
   "has_children" => "true",
   "has_outside_space" => "true",
   "likes_exercise" => "true"
@@ -56,8 +56,8 @@ owner5.save()
 animal1 = Animal.new({
   "name" => "Archie",
   "admission_date" => "17/03/19",
-  "type" => "dog",
-  "breed" => "cavapoo",
+  "type" => "Dog",
+  "breed" => "Cavapoo",
   "age" => "2",
   "status" => "adopted",
   "child_friendly" => "true",
@@ -72,8 +72,8 @@ animal1.save()
 animal2 = Animal.new({
   "name" => "Tony",
   "admission_date" => "26/01/19",
-  "type" => "tiger",
-  "breed" => "bengal",
+  "type" => "Tiger",
+  "breed" => "Bengal",
   "age" => "6",
   "status" => "available",
   "child_friendly" => "false",
@@ -88,8 +88,8 @@ animal2.save()
 animal3 = Animal.new({
   "name" => "Speedy",
   "admission_date" => "14/05/18",
-  "type" => "tortoise",
-  "breed" => "hermann",
+  "type" => "Tortoise",
+  "breed" => "Hermann",
   "age" => "64",
   "status" => "in vet care",
   "child_friendly" => "true",
@@ -104,8 +104,8 @@ animal3.save()
 animal4 = Animal.new({
   "name" => "Spot",
   "admission_date" => "01/04/19",
-  "type" => "dog",
-  "breed" => "dalmation",
+  "type" => "Dog",
+  "breed" => "Dalmation",
   "age" => "5",
   "status" => "in training",
   "child_friendly" => "true",
@@ -120,8 +120,8 @@ animal4.save()
 animal5 = Animal.new({
   "name" => "Buster",
   "admission_date" => "12/03/19",
-  "type" => "dog",
-  "breed" => "boxer",
+  "type" => "Dog",
+  "breed" => "Boxer",
   "age" => "7",
   "status" => "in training",
   "child_friendly" => "true",
@@ -136,8 +136,8 @@ animal5.save()
 animal6 = Animal.new({
   "name" => "Slippy",
   "admission_date" => "12/03/19",
-  "type" => "snake",
-  "breed" => "corn",
+  "type" => "Snake",
+  "breed" => "Corn",
   "age" => "3",
   "status" => "available",
   "child_friendly" => "true",
@@ -152,8 +152,8 @@ animal6.save()
 animal7 = Animal.new({
   "name" => "Molly",
   "admission_date" => "12/02/19",
-  "type" => "cat",
-  "breed" => "british shorthair",
+  "type" => "Cat",
+  "breed" => "British Shorthair",
   "age" => "3",
   "status" => "adopted",
   "child_friendly" => "true",
@@ -163,3 +163,50 @@ animal7 = Animal.new({
   "owner_id" => owner1.id
   })
 animal7.save()
+
+animal8 = Animal.new({
+  "name" => "Bert",
+  "admission_date" => "11/12/18",
+  "type" => "Bear",
+  "breed" => "Grizzly",
+  "age" => "8",
+  "status" => "available",
+  "child_friendly" => "false",
+  "needs_outside_space" => "true",
+  "needs_exercise" => "true",
+  "profile_pic" => "https://gohunt-assets-us-west-2.s3.amazonaws.com/media/wyoming-grizzly-bear-top_0.jpg",
+  "owner_id" => owner1.id
+  })
+animal8.save()
+
+
+
+animal9 = Animal.new({
+  "name" => "Percy",
+  "admission_date" => "21/02/19",
+  "type" => "Parrot",
+  "breed" => "Macaw",
+  "age" => "8",
+  "status" => "available",
+  "child_friendly" => "true",
+  "needs_outside_space" => "false",
+  "needs_exercise" => "false",
+  "profile_pic" => "https://www.parakeethome.com/wp-content/uploads/2018/05/Parrot.jpg",
+  "owner_id" => owner1.id
+  })
+animal9.save()
+
+animal10 = Animal.new({
+  "name" => "Tammy",
+  "admission_date" => "01/04/19",
+  "type" => "Dog",
+  "breed" => "Labrador",
+  "age" => "4",
+  "status" => "available",
+  "child_friendly" => "true",
+  "needs_outside_space" => "true",
+  "needs_exercise" => "true",
+  "profile_pic" => "https://www.petinsurancereview.co.uk/sites/default/files/2018-12/Labrador%20Breed%20guide_0.jpg",
+  "owner_id" => owner1.id
+  })
+animal10.save()

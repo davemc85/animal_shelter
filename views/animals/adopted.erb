@@ -3,10 +3,11 @@
 <table>
   <tr>
     <th></th>
-    <th>name</th>
-    <th>type</th>
-    <th>breed</th>
-    <th>owner name</th>
+    <th>Name</th>
+    <th>Type</th>
+    <th>Breed</th>
+    <th>Owner Name</th>
+    <th>Current Status</th>
     <th></th>
   </tr>
 
@@ -14,10 +15,11 @@
     <tr>
       <td><img style="width: 100px"src="<%= animal.profile_pic %>" ></td>
       <td><%= animal.name %></td>
-      <td><%= animal.type %></td>
       <td><%= animal.breed %></td>
+      <td><%= animal.type %></td>
       <td><%= animal.owner.full_name %></td>
-      <td><a href="/animals/<%= animal.id %>">Show Animal Profile</a></td>
+      <td><%= animal.status %></td>
+      <td><a href="/animals/<%= animal.id %>">View <%= animal.name %>'s Profile</a></td>
     </tr>
     <% end %>
 
