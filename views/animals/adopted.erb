@@ -1,4 +1,4 @@
-<h2>Animals that have been adopted</h2>
+<h1>Animals that have been adopted</h1>
 
 <table>
   <tr>
@@ -13,7 +13,7 @@
 
     <% @animals.each do |animal| %>
     <tr>
-      <td><img style="width: 100px"src="<%= animal.profile_pic %>" ></td>
+      <td><img class="polaroid" style="width: 100px"src="<%= animal.profile_pic %>" ></td>
       <td><%= animal.name %></td>
       <td><%= animal.breed %></td>
       <td><%= animal.type %></td>

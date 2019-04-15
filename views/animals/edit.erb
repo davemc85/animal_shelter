@@ -1,31 +1,31 @@
-<h2>Edit <%= @animal.name %> the <%= @animal.type %></h2>
+<h1>Edit <%= @animal.name %> the <%= @animal.type %></h1>
 
 
 <form class="" action="/animals/<%=@animal.id%>" method="post">
 
 
   <div class="">
-    <label for="name">Name: </label>
+    <label for="name">Name: </label><br>
     <input type="text" name="name" id="name" value="<%= @animal.name %>"/>
   </div>
 
   <div class="">
-    <label for="admission_date">Admission Date: </label>
+    <label for="admission_date">Admission Date: </label><br>
     <input type="text" name="admission_date" id="admission_date" value="<%= @animal.admission_date %>"/>
   </div>
 
   <div class="">
-    <label for="type">Type: </label>
+    <label for="type">Type: </label><br>
     <input type="text" name="type" id="type" value="<%= @animal.type %>"/>
   </div>
 
   <div class="">
-    <label for="breed">Breed: </label>
+    <label for="breed">Breed: </label><br>
     <input type="text" name="breed" id="breed" value="<%= @animal.breed %>"/>
   </div>
 
   <div class="">
-    <label for="age">Age: </label>
+    <label for="age">Age: </label><br>
     <input type="number" name="age" id="age" value="<%= @animal.age %>"/>
   </div>
 
@@ -53,7 +53,7 @@
 </table>
 
 <div class="">
-  <label for="profile_pic">Profile picture URL: </label>
+  <label for="profile_pic">Profile picture URL: </label><br>
   <input type="text" name="profile_pic" id="profile_pic" value="<%= @animal.profile_pic %>"/>
 </div>
 

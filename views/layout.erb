@@ -3,38 +3,24 @@
   <head>
     <meta charset="utf-8">
     <title>Wanna Pet Animal Shelter</title>
+    <link rel="stylesheet" href="/style.css">
   </head>
   <body>
     <main>
-      <nav>
-        <li>
-          <a href="/animals">Animals</a>
-        </li>
-        <li>
-          <a href="/owners">Owners</a>
-        </li>
-        <li>
-          <a href="/animals/new">Add a new animal</a>
-        </li>
-        <li>
-          <a href="/owners/new">Add a new owner</a>
-        </li>
-        <li>
-          <a href="/animals/available">Available Animals</a>
-        </li>
-        <li>
-          <a href="/animals/training">Animals in training</a>
-        </li>
-        <li>
-          <a href="/animals/vet">Animals in vet care</a>
-        </li>
-        <li>
-          <a href="/animals/adopted">Adopted Animals</a>
-        </li>
-        <li>
-          <a href="/animals/search">Find A Pet</a>
-        </li>
+
+      <nav id="menu">
+        <li class="menu-item"><a href="/animals">Animals</a></li>
+        <li class="menu-item"><a href="/owners">Owners</a></li>
+        <li class="menu-item"><a href="/animals/new">Add a new animal</a></li>
+        <li class="menu-item"><a href="/owners/new">Add a new owner</a></li>
+        <li class="menu-item"><a href="/animals/available">Available Animals</a></li>
+        <li class="menu-item"><a href="/animals/training">Animals in training</a></li>
+        <li class="menu-item"><a href="/animals/vet">Animals in vet care</a></li>
+        <li class="menu-item"><a href="/animals/adopted">Adopted Animals</a></li>
+        <li class="menu-item"><a href="/animals/search">Find A Pet</a></li>
       </nav>
+
+
       <%= yield %>
     </main>
   </body>

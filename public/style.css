@@ -1,5 +1,128 @@
 body {
-  background-image: url("/logo.png");
-  padding: 30px;
-  
+  background: deepskyblue;
+  font-family: tahoma;
+  margin: 20px;
+  text-decoration: none;
+}
+
+a {
+  text-decoration: none;
+  color: deeppink;
+}
+
+.logo{
+  position: absolute;
+  top: 20%;
+  right: 35%;
+  height: 200px;
+
+}
+
+.background{
+   position: relative;
+   width: 100%;
+}
+
+.homepage{
+  color: white;
+  align-items: center;
+  font-size: 38pt;
+}
+
+p{
+  color: white;
+}
+
+nav {
+  top: 0;
+  width: 100%;
+  display: block;
+  color: deepskyblue;
+  text-decoration: none;
+}
+#menu {
+  display: flex;
+  font-family: tahoma;
+  text-decoration: none;
+}
+
+.polaroid-profile {
+    background: white;
+    display: inline;
+    float: left;
+    margin: 0 15px 30px;
+    padding: 20px 20px 70px;
+    text-align: center;
+    text-decoration: none;
+    box-shadow: 0 8px 12px rgba(0,0,0,.3);
+    transition: all .15s linear;
+    z-index:0;
+    position:relative;
+}
+
+
+.polaroid-index {
+    background: white;
+
+    margin: 0 15px 30px;
+    padding: 10px 10px 50px;
+    text-align: center;
+    text-decoration: none;
+    box-shadow: 0 4px 6px rgba(0,0,0,.3);
+    transition: all .15s linear;
+    z-index:0;
+    position:relative;
+}
+
+
+
+
+
+.menu-item {
+  display: block;
+  background-color: white;
+  text-align: center;
+  padding: 15px 15px;
+  color: deepskyblue;
+  text-decoration: none;
+}
+.menu-item:hover {
+  background-color: ghostwhite;
+  color: deepskyblue;
+  text-decoration: none;
+}
+.menu-item:active {
+  background-color: deepskyblue;
+  color: white;
+  text-decoration: none;
+}
+h1 {
+  color: deeppink;
+
+}
+
+
+input[type=text] {
+  width: 80%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 2px solid deeppink;
+  border-radius: 4px;
+}
+input[type=radio] {
+
+}
+
+input[type=number]{
+  width: 80%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 2px solid deeppink;
+  border-radius: 4px;
+}
+
+input[type=submit]{
+
 }
