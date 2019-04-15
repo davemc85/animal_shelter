@@ -5,7 +5,7 @@
 
 <div>
   <% for animal in @animals %>
-  <p><img class="polaroid-index" style="height: 200px;" src="<%= animal.profile_pic %>" ></p>
+  <a href="/animals/<%= @animal.id %> class="polaroid-index" style="height: 200px;" src="<%= animal.profile_pic %>" ></a>
   <p>Name: <%= animal.name() %> </p>
   <p>Type: <%= animal.type %> </p>
   <p>Admission date: <%= animal.admission_date %></p>

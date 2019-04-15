@@ -15,7 +15,6 @@ a {
   top: 20%;
   right: 35%;
   height: 200px;
-
 }
 
 .background{
@@ -40,6 +39,7 @@ nav {
   color: deepskyblue;
   text-decoration: none;
 }
+
 #menu {
   display: flex;
   font-family: tahoma;
@@ -60,10 +60,8 @@ nav {
     position:relative;
 }
 
-
 .polaroid-index {
     background: white;
-
     margin: 0 15px 30px;
     padding: 10px 10px 50px;
     text-align: center;
@@ -73,10 +71,6 @@ nav {
     z-index:0;
     position:relative;
 }
-
-
-
-
 
 .menu-item {
   display: block;
@@ -109,9 +103,7 @@ input[type=text] {
   box-sizing: border-box;
   border: 2px solid deeppink;
   border-radius: 4px;
-}
-input[type=radio] {
-
+  font-size: 12pt;
 }
 
 input[type=number]{
@@ -121,8 +113,47 @@ input[type=number]{
   box-sizing: border-box;
   border: 2px solid deeppink;
   border-radius: 4px;
+  font-size: 12pt;
 }
 
 input[type=submit]{
 
 }
+
+.form{
+  color: white;
+  font-size: 12pt;
+}
+
+th {
+  color: deeppink;
+}
+
+/* style radio buttons */
+input[type='radio']:after {
+        width: 15px;
+        height: 15px;
+        border-radius: 15px;
+        top: -2px;
+        left: -1px;
+        position: relative;
+        background-color: #d1d3d1;
+        content: '';
+        display: inline-block;
+        visibility: visible;
+        border: 2px solid white;
+    }
+
+    input[type='radio']:checked:after {
+        width: 15px;
+        height: 15px;
+        border-radius: 15px;
+        top: -2px;
+        left: -1px;
+        position: relative;
+        background-color: deeppink;
+        content: '';
+        display: inline-block;
+        visibility: visible;
+        border: 2px solid white;
+    }

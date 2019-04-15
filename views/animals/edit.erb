@@ -52,12 +52,12 @@
   </tr>
 </table>
 
-<div class="">
+<div class="form">
   <label for="profile_pic">Profile picture URL: </label><br>
   <input type="text" name="profile_pic" id="profile_pic" value="<%= @animal.profile_pic %>"/>
 </div>
 
-<div class="">
+<div class="form">
   <label>
   Select current owner:
     <select name="owner_id">
@@ -69,7 +69,7 @@
   </label>
 </div>
 
-<div class="">
+<div class="form">
   <label for="status">Status: </label>
   <select name="status" id="status">
     <option value="<%= @animal.status%>">Please update...</option>
