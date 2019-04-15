@@ -1,7 +1,15 @@
-<div class="">
+<div>
   <% for animal in @animals do %>
-  <div class="">
+  <div>
+    <p><img style="width: 100px"src="<%= animal.profile_pic %>" ></p>
     <p>Name: <%= animal.name %> </p>
+    <p>Type: <%= animal.type %> </p>
+    <p>Breed: <%= animal.breed %> </p>
+    <p>Current owner: <%= animal.owner.full_name %></p>
+    <p>Current status: <%= animal.status %></p>
+    <p><a href="/animals/<%= animal.id %>">View <%= animal.name %>'s Profile</a></p>
+
+    <hr>
   </div>
-  <% end%>
+  <% end %>
 </div>

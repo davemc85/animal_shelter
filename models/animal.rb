@@ -124,8 +124,8 @@ class Animal
   end
 
   def self.search(params)
-    sql = "SELECT * FROM animals WHERE (name, type, breed) = ($1, $2, $3)"
-    values = [params[:name], params[:type], params[:breed]]
+    sql = "SELECT * FROM animals WHERE type=$1"
+    values = [params[:type].capitalize]
     animals = SqlRunner.run(sql, values)
     result = animals.map{|animal| Animal.new(animal)}
     return result
