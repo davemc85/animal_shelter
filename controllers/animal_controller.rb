@@ -10,6 +10,19 @@ get '/animals' do
   erb(:"animals/index")
 end
 
+get '/animals/search' do
+  erb(:"animals/search")
+end
+
+post '/animals/search' do
+  @animals = Animal.search(params)
+  if @animals == []
+    erb(:"animals/not_found")
+  else
+    erb(:"animals/search_result")
+  end
+end
+
 get '/animals/new' do
   @owners = Owner.all()
   erb(:"animals/new")
@@ -41,6 +54,8 @@ get '/animals/adopted' do
   erb(:"animals/adopted")
 end
 
+
+
 get '/animals/:id' do
   @animal = Animal.find_by_id( params['id'])
   erb(:"animals/show")
@@ -58,11 +73,9 @@ post '/animals/:id' do
   redirect to "/animals/#{params['id']}"
 end
 
-get '/animals/adopt' do
-  @animals = Animal.all_available
-  @owners = Owner.all
-  erb(:"animals/adopt")
-end
+
+
+
 
 
 post '/animals/:id/delete' do

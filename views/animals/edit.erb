@@ -46,7 +46,7 @@
     <td><input type="radio" name="needs_outside_space" value="false"></td>
   </tr>
   <tr>
-    <td><label for="needs_exercise">Does the animal like plenty of exercise? </label></td>
+    <td><label for="needs_exercise">Does the animal require plenty of exercise? </label></td>
     <td><input type="radio" name="needs_exercise" value="true"></td>
     <td><input type="radio" name="needs_exercise" value="false"></td>
   </tr>
@@ -73,10 +73,10 @@
   <label for="status">Status: </label>
   <select name="status" id="status">
     <option value="<%= @animal.status%>">Please update...</option>
-    <option value="Available">Available</option>
+    <option value="available">Available</option>
     <option value="in training">Currently in training</option>
     <option value="in vet care">Currently in vet care</option>
-    <option value="Adopted">Adopted</option>
+    <option value="adopted">Adopted</option>
   </select>
 </div>
 

@@ -123,6 +123,14 @@ class Animal
     return result
   end
 
+  def self.search(params)
+    sql = "SELECT * FROM animals WHERE (name, type, breed) = ($1, $2, $3)"
+    values = [params]
+    animals = SqlRunner.run(sql, values)
+    result = animals.map{|animal| Animal.new(animal)}
+    return result
+  end
+
 
 
 
