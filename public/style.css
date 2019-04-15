@@ -8,6 +8,7 @@ body {
 a {
   text-decoration: none;
   color: deeppink;
+  display: block;
 }
 
 .logo{
@@ -24,7 +25,7 @@ a {
 
 .homepage{
   color: white;
-  align-items: center;
+  text-align: center;
   font-size: 38pt;
 }
 
@@ -35,9 +36,15 @@ p{
 nav {
   top: 0;
   width: 100%;
-  display: block;
+  /* display: block; */
   color: deepskyblue;
   text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 
 #menu {
@@ -116,8 +123,28 @@ input[type=number]{
   font-size: 12pt;
 }
 
-input[type=submit]{
+input[type=submit] {
+background: deeppink;
+color: white;
+border: 1px solid #eee;
+border-radius: 20px;
+box-shadow: 1px 1px 1px #eee;
+text-shadow:none;
+}
 
+input[type=submit]:hover {
+background: white;
+color: deeppink;
+border: 1px solid #eee;
+border-radius: 20px;
+box-shadow: 1px 1px 1px #eee;
+text-shadow:none;
+}
+
+.form-select {
+  color: deeppink;
+  font-size: 12pt;
+  font: inherit;
 }
 
 .form{
@@ -125,8 +152,20 @@ input[type=submit]{
   font-size: 12pt;
 }
 
+.form-menu{
+  color: white;
+  font-size: 12pt;
+}
+
+td {
+  color: white;
+  text-align: center;
+}
+
 th {
   color: deeppink;
+  font-size: 18pt;
+  text-align: center;
 }
 
 /* style radio buttons */
@@ -156,4 +195,10 @@ input[type='radio']:after {
         display: inline-block;
         visibility: visible;
         border: 2px solid white;
+    }
+
+    .full_table {
+      table-layout: fixed;
+      width: 100%;
+
     }

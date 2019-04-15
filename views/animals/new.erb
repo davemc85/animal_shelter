@@ -50,17 +50,17 @@
     <td><input type="radio" name="needs_exercise" value="true"></td>
     <td><input type="radio" name="needs_exercise" value="false"></td>
   </tr>
-</table>
+</table><br>
 
 <div class="form">
   <label for="profile_pic">Profile picture URL: </label><br>
   <input type="text" name="profile_pic" id="profile_pic"/>
 </div>
 
-<div class="form">
+<div class="form-menu">
   <label>
   Select current owner:
-    <select name="owner_id">
+    <select class="form-select" name="owner_id">
       <% for owner in @owners %>
       <option value="<%= owner.id %>"><%= owner.full_name %></option>
       <% end %>
@@ -70,7 +70,7 @@
 
 <div class="form">
   <label for="status">Status: </label>
-  <select name="status" id="status">
+  <select class="form-select" name="status" id="status">
     <option value="" selected hidden >Please select current status</option>
     <option value="Available">Available</option>
     <option value="in training">Currently in training</option>
