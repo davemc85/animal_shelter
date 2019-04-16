@@ -63,11 +63,11 @@ ul {
     background: white;
     display: inline;
     float: left;
-    margin: 0 15px 30px;
-    padding: 20px 20px 70px;
+    margin: 0 10px 60px;
+    padding: 20px 20px 80px;
     text-align: center;
     text-decoration: none;
-    box-shadow: 0 8px 12px rgba(0,0,0,.3);
+    box-shadow: 0 8px 12px rgba(0,0,0,.6);
     transition: all .15s linear;
     z-index:0;
     position:relative;
@@ -76,13 +76,19 @@ ul {
   text-align: left;
 }
 
+.polaroid{
+  background: white;
+  box-shadow: 0 8px 12px rgba(0,0,0,.6);
+  padding: 2px 2px 2px;
+}
+
 .polaroid-index {
     background: white;
-    margin: 0 15px 30px;
+    margin: 0 10px 10px;
     padding: 10px 10px 50px;
     text-align: center;
     text-decoration: none;
-    box-shadow: 0 4px 6px rgba(0,0,0,.3);
+    box-shadow: 0 4px 6px rgba(0,0,0,.6);
     transition: all .15s linear;
     z-index:0;
     position:relative;

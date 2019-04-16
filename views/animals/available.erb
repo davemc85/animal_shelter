@@ -12,7 +12,7 @@
 
     <% @animals.each do |animal| %>
     <tr>
-      <td><img style="width: 100px"src="<%= animal.profile_pic %>" ></td>
+      <td><img class="polaroid" style="width: 100px"src="<%= animal.profile_pic %>" ></td>
       <td scope="row"><%= animal.name %></td>
       <td><%= animal.breed %></td>
       <td><%= animal.type %></td>
