@@ -18,15 +18,15 @@ a {
 }
 
 .logo{
-  position: absolute;
-  top: 20%;
-  right: 35%;
-  height: 200px;
+position: absolute;
+top: 20%;
+right: 35%;
+height: 200px;
 }
 
 .background{
-   position: relative;
-   width: 100%;
+ position: relative;
+ width: 100%;
 }
 
 .homepage{
@@ -60,17 +60,17 @@ ul {
 }
 
 .polaroid-profile {
-    background: white;
-    display: inline;
-    float: left;
-    margin: 0 10px 60px;
-    padding: 20px 20px 80px;
-    text-align: center;
-    text-decoration: none;
-    box-shadow: 0 8px 12px rgba(0,0,0,.6);
-    transition: all .15s linear;
-    z-index:0;
-    position:relative;
+  background: white;
+  display: inline;
+  float: left;
+  margin: 0 10px 60px;
+  padding: 20px 20px 80px;
+  text-align: center;
+  text-decoration: none;
+  box-shadow: 0 8px 12px rgba(0,0,0,.6);
+  transition: all .15s linear;
+  z-index:0;
+  position:relative;
 }
 .left{
   text-align: left;
@@ -83,15 +83,15 @@ ul {
 }
 
 .polaroid-index {
-    background: white;
-    margin: 0 10px 10px;
-    padding: 10px 10px 50px;
-    text-align: center;
-    text-decoration: none;
-    box-shadow: 0 4px 6px rgba(0,0,0,.6);
-    transition: all .15s linear;
-    z-index:0;
-    position:relative;
+  background: white;
+  margin: 0 10px 10px;
+  padding: 10px 10px 50px;
+  text-align: center;
+  text-decoration: none;
+  box-shadow: 0 4px 6px rgba(0,0,0,.6);
+  transition: all .15s linear;
+  z-index:0;
+  position:relative;
 }
 
 .menu-item {
@@ -102,21 +102,22 @@ ul {
   color: deepskyblue;
   text-decoration: none;
 }
+
 .menu-item:hover {
   background-color: ghostwhite;
   color: deepskyblue;
   text-decoration: none;
 }
+
 .menu-item:active {
   background-color: deepskyblue;
   color: white;
   text-decoration: none;
 }
+
 h1 {
   color: deeppink;
-
 }
-
 
 input[type=text] {
   width: 80%;
@@ -139,23 +140,23 @@ input[type=number]{
 }
 
 input[type=submit] {
-background: deeppink;
-color: white;
-border: 1px solid #eee;
-border-radius: 20px;
-box-shadow: 1px 1px 1px #eee;
-text-shadow:none;
-font-size: 12pt;
+  background: deeppink;
+  color: white;
+  border: 1px solid #eee;
+  border-radius: 20px;
+  box-shadow: 1px 1px 1px #eee;
+  text-shadow:none;
+  font-size: 12pt;
 }
 
 input[type=submit]:hover {
-background: white;
-color: deeppink;
-border: 1px solid #eee;
-border-radius: 20px;
-box-shadow: 1px 1px 1px #eee;
-text-shadow:none;
-font-size: 12pt;
+  background: white;
+  color: deeppink;
+  border: 1px solid #eee;
+  border-radius: 20px;
+  box-shadow: 1px 1px 1px #eee;
+  text-shadow:none;
+  font-size: 12pt;
 }
 
 .form-select {
@@ -192,34 +193,34 @@ th {
 
 /* style radio buttons */
 input[type='radio']:after {
-        width: 15px;
-        height: 15px;
-        border-radius: 15px;
-        top: -2px;
-        left: -1px;
-        position: relative;
-        background-color: #d1d3d1;
-        content: '';
-        display: inline-block;
-        visibility: visible;
-        border: 2px solid white;
-    }
+  width: 15px;
+  height: 15px;
+  border-radius: 15px;
+  top: -2px;
+  left: -1px;
+  position: relative;
+  background-color: #d1d3d1;
+  content: '';
+  display: inline-block;
+  visibility: visible;
+  border: 2px solid white;
+}
 
-    input[type='radio']:checked:after {
-        width: 15px;
-        height: 15px;
-        border-radius: 15px;
-        top: -2px;
-        left: -1px;
-        position: relative;
-        background-color: deeppink;
-        content: '';
-        display: inline-block;
-        visibility: visible;
-        border: 2px solid white;
-    }
+input[type='radio']:checked:after {
+  width: 15px;
+  height: 15px;
+  border-radius: 15px;
+  top: -2px;
+  left: -1px;
+  position: relative;
+  background-color: deeppink;
+  content: '';
+  display: inline-block;
+  visibility: visible;
+  border: 2px solid white;
+}
 
-    .full_table {
-      table-layout: fixed;
-      width: 100%;
-    }
+.full_table {
+  table-layout: fixed;
+  width: 100%;
+}
