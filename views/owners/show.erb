@@ -8,7 +8,13 @@
 <p>Lifestyle: <%= @owner.owner_exercise %></p>
 
 
-<a href="/owners/<%= @owner.id %>/edit">Edit <%= @owner.full_name %></a>
+
+
+<form action="/owners/<%= @owner.id %>/edit" method="get">
+<input type="submit" value="Edit <%= @owner.full_name %>'s Details">
+</form>
+
+
 <form action="/owners/<%= @owner.id %>/delete" method="post">
 <input type="submit" value="Delete <%= @owner.full_name %>">
 </form>

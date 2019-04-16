@@ -139,6 +139,7 @@ border: 1px solid #eee;
 border-radius: 20px;
 box-shadow: 1px 1px 1px #eee;
 text-shadow:none;
+font-size: 12pt;
 }
 
 input[type=submit]:hover {
@@ -148,6 +149,7 @@ border: 1px solid #eee;
 border-radius: 20px;
 box-shadow: 1px 1px 1px #eee;
 text-shadow:none;
+font-size: 12pt;
 }
 
 .form-select {

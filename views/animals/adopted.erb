@@ -1,11 +1,10 @@
-<h1>Animals that have been adopted</h1>
+<h1>Animals that have found a new home!</h1>
 
 <table class=full_table>
   <tr>
     <th scope="col"></th>
     <th scope="col">Name</th>
     <th scope="col">Type</th>
-    <th scope="col">Breed</th>
     <th scope="col">Owner Name</th>
     <th scope="col">Current Status</th>
     <th scope="col"></th>
@@ -15,7 +14,6 @@
     <tr>
       <td scope="row"><img class="polaroid" style="width: 100px"src="<%= animal.profile_pic %>" ></td>
       <td scope="row"><%= animal.name %></td>
-      <td scope="row"><%= animal.breed %></td>
       <td scope="row"><%= animal.type %></td>
       <td scope="row"><%= animal.owner.full_name %></td>
       <td scope="row"><%= animal.status %></td>

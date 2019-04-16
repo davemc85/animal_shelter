@@ -93,7 +93,7 @@ class Animal
 
   def self.all_available
     sql = "SELECT * FROM animals WHERE status = $1"
-    values = ["available"]
+    values = ["Available"]
     animals = SqlRunner.run(sql, values)
     result = animals.map{|animal| Animal.new(animal)}
     return result
