@@ -10,17 +10,17 @@
     <th scope="col"></th>
   </tr>
 
-    <% @animals.each do |animal| %>
-    <tr>
-      <td scope="row"><img class="polaroid" style="width: 100px"src="<%= animal.profile_pic %>" ></td>
-      <td scope="row"><%= animal.name %></td>
-      <td scope="row"><%= animal.type %></td>
-      <td scope="row"><%= animal.owner.full_name %></td>
-      <td scope="row"><%= animal.status %></td>
-      <td scope="row"><form action="/animals/<%= animal.id %>" method="get">
-      <input type="submit" value="View <%= animal.name %>'s Profile">
-      </form></td>
-    </tr>
-    <% end %>
+  <% @animals.each do |animal| %>
+  <tr>
+    <td scope="row"><img class="polaroid" style="width: 100px"src="<%= animal.profile_pic %>" ></td>
+    <td scope="row"><%= animal.name %></td>
+    <td scope="row"><%= animal.type %></td>
+    <td scope="row"><%= animal.owner.full_name %></td>
+    <td scope="row"><%= animal.status %></td>
+    <td scope="row"><form action="/animals/<%= animal.id %>" method="get">
+    <input type="submit" value="View <%= animal.name %>'s Profile">
+    </form></td>
+  </tr>
+  <% end %>
 
 </table>

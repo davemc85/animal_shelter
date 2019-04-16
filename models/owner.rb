@@ -3,7 +3,7 @@ require_relative('animal.rb')
 require('pry-byebug')
 
 class Owner
- 
+
   attr_reader :id, :first_name, :last_name, :location, :has_children, :has_outside_space, :likes_exercise
 
   def initialize( options )
@@ -91,6 +91,5 @@ class Owner
     results = SqlRunner.run(sql, values)
     return results.map { |pet| Animal.new(pet)}
   end
-
 
 end

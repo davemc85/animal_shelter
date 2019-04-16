@@ -12,7 +12,6 @@ CREATE TABLE owners(
   likes_exercise BOOLEAN
 );
 
-
 CREATE TABLE animals(
   id SERIAL PRIMARY KEY,
   name VARCHAR,

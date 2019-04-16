@@ -3,7 +3,7 @@ require( 'sinatra/contrib/all' )
 require_relative( '../models/owner.rb' )
 require_relative( '../models/animal.rb' )
 also_reload( '../models/*' )
- 
+
 
 get '/owners' do
   @owners = Owner.all()
@@ -34,7 +34,6 @@ post '/owners/:id' do
   @owner.update
   redirect to "/owners/#{params['id']}"
 end
-
 
 post '/owners/:id/delete' do
   owner = Owner.find_by_id(params['id'])
