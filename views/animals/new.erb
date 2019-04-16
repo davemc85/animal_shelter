@@ -5,27 +5,27 @@
 
   <div class="form">
     <label for="name">Name: </label><br>
-    <input type="text" name="name" id="name"/>
+    <input type="text" name="name" id="name" required/>
   </div>
 
   <div class="form">
     <label for="admission_date">Admission Date: </label><br>
-    <input type="text" name="admission_date" id="admission_date"/>
+    <input type="text" name="admission_date" id="admission_date" required/>
   </div>
 
   <div class="form">
     <label for="type">Type: </label><br>
-    <input type="text" name="type" id="type"/>
+    <input type="text" name="type" id="type" required/>
   </div>
 
   <div class="form">
     <label for="breed">Breed: </label><br>
-    <input type="text" name="breed" id="breed"/>
+    <input type="text" name="breed" id="breed" required/>
   </div>
 
   <div class="form">
     <label for="age">Age: </label><br>
-    <input type="number" name="age" id="age"/>
+    <input type="number" name="age" id="age" min="0" required/>
   </div>
 
 
@@ -37,30 +37,31 @@
   </tr>
   <tr>
     <td><label for="child_friendly">Is the animal child friendly? </label></td>
-    <td><input type="radio" name="child_friendly" value="true"></td>
+    <td><input type="radio" name="child_friendly" value="true" required></td>
     <td><input type="radio" name="child_friendly" value="false"></td>
   </tr>
   <tr>
     <td><label for="needs_outside_space">Does the animal need space outside? </label></td>
-    <td><input type="radio" name="needs_outside_space" value="true"></td>
+    <td><input type="radio" name="needs_outside_space" value="true" required></td>
     <td><input type="radio" name="needs_outside_space" value="false"></td>
   </tr>
   <tr>
     <td><label for="needs_exercise">Does the animal like plenty of exercise? </label></td>
-    <td><input type="radio" name="needs_exercise" value="true"></td>
+    <td><input type="radio" name="needs_exercise" value="true" required></td>
     <td><input type="radio" name="needs_exercise" value="false"></td>
   </tr>
 </table><br>
 
 <div class="form">
   <label for="profile_pic">Profile picture URL: </label><br>
-  <input type="text" name="profile_pic" id="profile_pic"/>
+  <input type="text" name="profile_pic" id="profile_pic" required/>
 </div>
 
 <div class="form-menu">
   <label>
   Select current owner:
-    <select class="form-select" name="owner_id">
+    <select class="form-select" name="owner_id" required>
+      <option value="" selected hidden >Please select current owner</option>
       <% for owner in @owners %>
       <option value="<%= owner.id %>"><%= owner.full_name %></option>
       <% end %>
@@ -70,7 +71,7 @@
 
 <div class="form">
   <label for="status">Status: </label>
-  <select class="form-select" name="status" id="status">
+  <select class="form-select" name="status" id="status" required>
     <option value="" selected hidden >Please select current status</option>
     <option value="Available">Available</option>
     <option value="in training">Currently in training</option>
