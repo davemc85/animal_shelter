@@ -52,6 +52,15 @@ owner5 = Owner.new({
   })
 owner5.save()
 
+owner6 = Owner.new({
+  "first_name" => "Alan",
+  "last_name" => "Russell",
+  "location" => "Fife",
+  "has_children" => "true",
+  "has_outside_space" => "true",
+  "likes_exercise" => "false"
+  })
+owner6.save()
 
 animal1 = Animal.new({
   "name" => "Archie",
