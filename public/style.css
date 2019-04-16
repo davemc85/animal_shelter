@@ -5,6 +5,11 @@ body {
   text-decoration: none;
 }
 
+hr{
+  color: white;
+  border: 1px solid white;
+}
+
 .title {
   color: deeppink;
   text-align: center;
@@ -63,7 +68,7 @@ ul {
   background: white;
   display: inline;
   float: left;
-  margin: 0 10px 60px;
+  margin: 0 20px 60px;
   padding: 20px 20px 80px;
   text-align: center;
   text-decoration: none;
