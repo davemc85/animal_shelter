@@ -11,18 +11,18 @@
     <th></th>
   </tr>
 
-    <% @animals.each do |animal| %>
-    <tr>
-      <td><img style="width: 100px"src="<%= animal.profile_pic %>" ></td>
-      <td><%= animal.name %></td>
-      <td><%= animal.type %></td>
-      <td><%= animal.admission_date %></td>
-      <td><%= animal.status %></td>
-      <td><%= animal.owner.full_name %></td>
-      <td><form action="/animals/<%= animal.id %>" method="get">
-      <input type="submit" value="View <%= animal.name %>'s Profile">
-      </form></td>
-    </tr>
-    <% end %>
+  <% @animals.each do |animal| %>
+  <tr>
+    <td><img style="width: 100px"src="<%= animal.profile_pic %>" ></td>
+    <td><%= animal.name %></td>
+    <td><%= animal.type %></td>
+    <td><%= animal.admission_date %></td>
+    <td><%= animal.status %></td>
+    <td><%= animal.owner.full_name %></td>
+    <td><form action="/animals/<%= animal.id %>" method="get">
+    <input type="submit" value="View <%= animal.name %>'s Profile">
+    </form></td>
+  </tr>
+  <% end %>
 
 </table>

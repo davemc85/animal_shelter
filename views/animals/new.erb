@@ -2,7 +2,6 @@
 
 <form class="form-wrapper" action="/animals" method="post">
 
-
   <div class="form">
     <label for="name">Name: </label><br>
     <input type="text" name="name" id="name" required/>
@@ -28,64 +27,59 @@
     <input type="number" name="age" id="age" min="0" required/>
   </div>
 
+  <table class="radio">
+    <tr>
+      <th></th>
+      <th>Yes</th>
+      <th>No</th>
+    </tr>
+    <tr>
+      <td><label for="child_friendly">Is the animal child friendly? </label></td>
+      <td><input type="radio" name="child_friendly" value="true" required></td>
+      <td><input type="radio" name="child_friendly" value="false"></td>
+    </tr>
+    <tr>
+      <td><label for="needs_outside_space">Does the animal need space outside? </label></td>
+      <td><input type="radio" name="needs_outside_space" value="true" required></td>
+      <td><input type="radio" name="needs_outside_space" value="false"></td>
+    </tr>
+    <tr>
+      <td><label for="needs_exercise">Does the animal like plenty of exercise? </label></td>
+      <td><input type="radio" name="needs_exercise" value="true" required></td>
+      <td><input type="radio" name="needs_exercise" value="false"></td>
+    </tr>
+  </table><br>
 
-<table class="radio">
-  <tr>
-    <th></th>
-    <th>Yes</th>
-    <th>No</th>
-  </tr>
-  <tr>
-    <td><label for="child_friendly">Is the animal child friendly? </label></td>
-    <td><input type="radio" name="child_friendly" value="true" required></td>
-    <td><input type="radio" name="child_friendly" value="false"></td>
-  </tr>
-  <tr>
-    <td><label for="needs_outside_space">Does the animal need space outside? </label></td>
-    <td><input type="radio" name="needs_outside_space" value="true" required></td>
-    <td><input type="radio" name="needs_outside_space" value="false"></td>
-  </tr>
-  <tr>
-    <td><label for="needs_exercise">Does the animal like plenty of exercise? </label></td>
-    <td><input type="radio" name="needs_exercise" value="true" required></td>
-    <td><input type="radio" name="needs_exercise" value="false"></td>
-  </tr>
-</table><br>
+  <div class="form">
+    <label for="profile_pic">Profile picture URL: </label><br>
+    <input type="text" name="profile_pic" id="profile_pic" required/>
+  </div>
 
-<div class="form">
-  <label for="profile_pic">Profile picture URL: </label><br>
-  <input type="text" name="profile_pic" id="profile_pic" required/>
-</div>
+  <div class="form-menu">
+    <label>
+    Select current owner:
+      <select class="form-select" name="owner_id" required>
+        <option value="" selected hidden >Please select current owner</option>
+        <% for owner in @owners %>
+        <option value="<%= owner.id %>"><%= owner.full_name %></option>
+        <% end %>
+      </select>
+    </label>
+  </div>
 
-<div class="form-menu">
-  <label>
-  Select current owner:
-    <select class="form-select" name="owner_id" required>
-      <option value="" selected hidden >Please select current owner</option>
-      <% for owner in @owners %>
-      <option value="<%= owner.id %>"><%= owner.full_name %></option>
-      <% end %>
+  <div class="form">
+    <label for="status">Status: </label>
+    <select class="form-select" name="status" id="status" required>
+      <option value="" selected hidden >Please select current status</option>
+      <option value="Available">Available</option>
+      <option value="in training">Currently in training</option>
+      <option value="in vet care">Currently in vet care</option>
+      <option value="Adopted">Adopted</option>
     </select>
-  </label>
-</div>
-
-<div class="form">
-  <label for="status">Status: </label>
-  <select class="form-select" name="status" id="status" required>
-    <option value="" selected hidden >Please select current status</option>
-    <option value="Available">Available</option>
-    <option value="in training">Currently in training</option>
-    <option value="in vet care">Currently in vet care</option>
-    <option value="Adopted">Adopted</option>
-  </select>
-</div>
-
-
-
+  </div>
 
   <div class="form">
     <input type="submit" value="Add animal"/>
   </div>
-
 
 </form>

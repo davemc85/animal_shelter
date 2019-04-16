@@ -59,7 +59,7 @@ class Animal
   end
 
 
-
+# functions added to turn the 't' or 'f' returns into readable strings
   def kid_friendly
     if @child_friendly == "t"
       "I love children"
@@ -91,6 +91,7 @@ class Animal
     return Owner.new(result)
   end
 
+# returns all animals that are marked as avaiable for adoption
   def self.all_available
     sql = "SELECT * FROM animals WHERE status = $1"
     values = ["Available"]
@@ -99,6 +100,7 @@ class Animal
     return result
   end
 
+# returns all animals that are marked as in training
   def self.training
     sql = "SELECT * FROM animals WHERE status = $1"
     values = ["in training"]
@@ -107,6 +109,7 @@ class Animal
     return result
   end
 
+# returns all animals that are marked as in vet care
   def self.vet
     sql = "SELECT * FROM animals WHERE status = $1"
     values = ["in vet care"]
@@ -115,6 +118,7 @@ class Animal
     return result
   end
 
+# returns all animals that are not registered at the animal shelter
   def self.adopted
     sql = "SELECT * FROM animals WHERE NOT owner_id = $1"
     values = [1]
@@ -123,6 +127,7 @@ class Animal
     return result
   end
 
+# search intended to return all dogs or cats etc
   def self.search(params)
     sql = "SELECT * FROM animals WHERE type=$1"
     values = [params[:type].capitalize]

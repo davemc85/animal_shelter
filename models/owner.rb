@@ -59,6 +59,7 @@ class Owner
     SqlRunner.run(sql, values)
   end
 
+# designed to return a string instead of 't' or 'f'
   def needs_children_friendly
     if @has_children == "t"
       "I need a child friendly animal"

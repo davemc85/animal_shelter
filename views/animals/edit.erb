@@ -29,58 +29,56 @@
     <input type="number" name="age" id="age" min="0" value="<%= @animal.age %>"/>
   </div>
 
-<table>
-  <tr>
-    <th></th>
-    <th>Yes</th>
-    <th>No</th>
-  </tr>
-  <tr>
-    <td><label for="child_friendly">Is the animal child friendly? </label></td>
-    <td><input type="radio" name="child_friendly" value="true"></td>
-    <td><input type="radio" name="child_friendly" value="false"></td>
-  </tr>
-  <tr>
-    <td><label for="needs_outside_space">Does the animal need space outside? </label></td>
-    <td><input type="radio" name="needs_outside_space" value="true"></td>
-    <td><input type="radio" name="needs_outside_space" value="false"></td>
-  </tr>
-  <tr>
-    <td><label for="needs_exercise">Does the animal require plenty of exercise? </label></td>
-    <td><input type="radio" name="needs_exercise" value="true"></td>
-    <td><input type="radio" name="needs_exercise" value="false"></td>
-  </tr>
-</table><br>
+  <table>
+    <tr>
+      <th></th>
+      <th>Yes</th>
+      <th>No</th>
+    </tr>
+    <tr>
+      <td><label for="child_friendly">Is the animal child friendly? </label></td>
+      <td><input type="radio" name="child_friendly" value="true"></td>
+      <td><input type="radio" name="child_friendly" value="false"></td>
+    </tr>
+    <tr>
+      <td><label for="needs_outside_space">Does the animal need space outside? </label></td>
+      <td><input type="radio" name="needs_outside_space" value="true"></td>
+      <td><input type="radio" name="needs_outside_space" value="false"></td>
+    </tr>
+    <tr>
+      <td><label for="needs_exercise">Does the animal require plenty of exercise? </label></td>
+      <td><input type="radio" name="needs_exercise" value="true"></td>
+      <td><input type="radio" name="needs_exercise" value="false"></td>
+    </tr>
+  </table><br>
 
-<div class="form">
-  <label for="profile_pic">Profile picture URL: </label><br>
-  <input type="text" name="profile_pic" id="profile_pic" value="<%= @animal.profile_pic %>"/>
-</div>
+  <div class="form">
+    <label for="profile_pic">Profile picture URL: </label><br>
+    <input type="text" name="profile_pic" id="profile_pic" value="<%= @animal.profile_pic %>"/>
+  </div>
 
-<div class="form">
-  <label>
-  Select current owner:
-    <select class="form-select" name="owner_id">
-      <option value="<%= @animal.owner_id%>">Please update current owner...</option>
-      <% for owner in @owners %>
-      <option value="<%= owner.id %>"><%= owner.full_name %></option>
-      <% end %>
+  <div class="form">
+    <label>
+    Select current owner:
+      <select class="form-select" name="owner_id">
+        <option value="<%= @animal.owner_id%>">Please update current owner...</option>
+        <% for owner in @owners %>
+        <option value="<%= owner.id %>"><%= owner.full_name %></option>
+        <% end %>
+      </select>
+    </label>
+  </div>
+
+  <div class="form">
+    <label for="status">Status: </label>
+    <select class="form-select" name="status" id="status">
+      <option value="<%= @animal.status%>">Please update...</option>
+      <option value="available">Available</option>
+      <option value="in training">Currently in training</option>
+      <option value="in vet care">Currently in vet care</option>
+      <option value="adopted">Adopted</option>
     </select>
-  </label>
-</div>
-
-<div class="form">
-  <label for="status">Status: </label>
-  <select class="form-select" name="status" id="status">
-    <option value="<%= @animal.status%>">Please update...</option>
-    <option value="available">Available</option>
-    <option value="in training">Currently in training</option>
-    <option value="in vet care">Currently in vet care</option>
-    <option value="adopted">Adopted</option>
-  </select>
-</div>
-
-
+  </div>
 
   <div class="">
     <input type="submit" value="Confirm changes"/>
@@ -88,8 +86,6 @@
 
   <div class="">
     <a href="/animals/<%= @animal.id %>">Cancel</a>
-
   </div>
-
 
 </form>
