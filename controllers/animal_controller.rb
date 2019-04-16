@@ -23,14 +23,6 @@ post '/animals/search' do
   end
 end
 
-post 'animals/match' do
-  @animals = Animal.match(params)
-  if @animals = []
-    erb(:"animals/no_match")
-  else
-    erb(:"animals/success")
-  end
-end
 
 get '/animals/new' do
   @owners = Owner.all()

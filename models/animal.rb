@@ -136,13 +136,6 @@ class Animal
     return result
   end
 
-  def self.match(params)
-    sql = "SELECT * FROM animals WHERE (child_friendly, needs_outside_space, needs_exercise) = ($1, $2, $3)"
-    values = [params[:child_friendly], params[:needs_outside_space], params[:needs_exercise]]
-    animals = SqlRunner.run(sql, values)
-    result = animals.map{|animal| Animal.new(animal)}
-    return result
-  end
 
 
 
