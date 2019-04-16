@@ -8,7 +8,9 @@
     <p>Breed: <%= animal.breed %> </p>
     <p>Current owner: <%= animal.owner.full_name %></p>
     <p>Current status: <%= animal.status %></p>
-    <p><a href="/animals/<%= animal.id %>">View <%= animal.name %>'s Profile</a></p>
+    <form action="/animals/<%= animal.id %>" method="get">
+    <input type="submit" value="View <%= animal.name %>'s Profile">
+    </form>
 
     <hr>
   </div>

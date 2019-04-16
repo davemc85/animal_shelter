@@ -21,7 +21,9 @@
       <td><%= animal.admission_date %></td>
       <td><%= animal.status %></td>
       <td><%= animal.owner.full_name %></td>
-      <td><a href="/animals/<%= animal.id %>">View <%= animal.name %>'s Profile</a></td>
+      <td><form action="/animals/<%= animal.id %>" method="get">
+      <input type="submit" value="View <%= animal.name %>'s Profile">
+      </form></td>
     </tr>
     <% end %>
 

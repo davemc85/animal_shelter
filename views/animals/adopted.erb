@@ -19,7 +19,9 @@
       <td scope="row"><%= animal.type %></td>
       <td scope="row"><%= animal.owner.full_name %></td>
       <td scope="row"><%= animal.status %></td>
-      <td scope="row"><a href="/animals/<%= animal.id %>">View <%= animal.name %>'s Profile</a></td>
+      <td scope="row"><form action="/animals/<%= animal.id %>" method="get">
+      <input type="submit" value="View <%= animal.name %>'s Profile">
+      </form></td>
     </tr>
     <% end %>
 

@@ -5,6 +5,12 @@ body {
   text-decoration: none;
 }
 
+.title {
+  color: deeppink;
+  text-align: center;
+  font-size: 48pt;
+}
+
 a {
   text-decoration: none;
   color: deeppink;
@@ -65,6 +71,9 @@ ul {
     transition: all .15s linear;
     z-index:0;
     position:relative;
+}
+.left{
+  text-align: left;
 }
 
 .polaroid-index {
@@ -157,6 +166,11 @@ text-shadow:none;
   font-size: 12pt;
 }
 
+td label {
+  color: white;
+  text-align: left;
+}
+
 td {
   color: white;
   text-align: center;
@@ -200,5 +214,4 @@ input[type='radio']:after {
     .full_table {
       table-layout: fixed;
       width: 100%;
-
     }
