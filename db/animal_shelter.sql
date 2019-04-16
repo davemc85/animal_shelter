@@ -25,5 +25,5 @@ CREATE TABLE animals(
   needs_outside_space BOOLEAN,
   needs_exercise BOOLEAN,
   profile_pic VARCHAR,
-  owner_id INT REFERENCES owners(id) 
+  owner_id INT REFERENCES owners(id) ON DELETE CASCADE
 );

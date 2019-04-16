@@ -3,7 +3,7 @@ require( 'sinatra/contrib/all' )
 require_relative( '../models/owner.rb' )
 require_relative( '../models/animal.rb' )
 also_reload( '../models/*' )
-
+ 
 
 get '/owners' do
   @owners = Owner.all()

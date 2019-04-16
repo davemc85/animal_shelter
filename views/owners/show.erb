@@ -5,7 +5,7 @@
 <p>Location: <%= @owner.location %></p>
 <p>Children restrictions: <%= @owner.needs_children_friendly %></p>
 <p>Outside area: <%= @owner.outdoor_space %></p>
-<p>Lifestyle: <%= @owner.owner_exercise %></p
+<p>Lifestyle: <%= @owner.owner_exercise %></p>
 
 <form action="/owners/<%= @owner.id %>/edit" method="get">
   <input type="submit" value="Edit <%= @owner.full_name %>'s Details">

@@ -1,6 +1,6 @@
 <h1><%=@animal.name%></h1>
 
-<p><img class="polaroid-profile" style="width: 600px" src="<%= @animal.profile_pic %>" ></p>
+  <p><img class="polaroid-profile" style="width: 600px" src="<%= @animal.profile_pic %>" ></p>
 <p>Name: <%= @animal.name %> </p>
 <p>Type: <%= @animal.type %> </p>
 <p>Breed: <%= @animal.breed %> </p>
@@ -10,12 +10,12 @@
 <p>Outdoor space required? <%= @animal.outside_space %></p>
 <p>Exercise requirements: <%= @animal.exercise %></p>
 <p>Current owner: <%= @animal.owner.full_name %></p>
-<p>Current status: <%= @animal.status %></p>
+<p>Current status: <%= @animal.status %></p><br>
 
 <form action="/animals/<%= @animal.id %>/edit" method="get">
-<input type="submit" value="Update <%= @animal.name %>">
-</form><br>
+  <input type="submit" value="Update <%= @animal.name %>">
+</form>
 
 <form action="/animals/<%= @animal.id %>/delete" method="post">
-<input type="submit" value="Delete <%= @animal.name %>">
+  <input type="submit" value="Delete <%= @animal.name %>">
 </form>
