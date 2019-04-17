@@ -1,10 +1,10 @@
 <h1>All our potential owners</h1>
 
 <% @owners.each do |owner| %>
-  <p>Name: <%= owner.full_name() %> </p>
-  <p>Location: <%= owner.location %> </p>
-  <form action="/owners/<%= owner.id %>" method="get">
+<p>Name: <%= owner.full_name() %> </p>
+<p>Location: <%= owner.location %> </p>
+<form action="/owners/<%= owner.id %>" method="get">
   <input type="submit" value="View <%= owner.full_name %>'s Profile">
-  </form>
-  <hr>
+</form>
+<hr>
 <% end %>
