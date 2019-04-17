@@ -35,18 +35,18 @@
     </tr>
     <tr>
       <td><label for="child_friendly">Is the animal child friendly? </label></td>
-      <td><input type="radio" name="child_friendly" value="true"></td>
-      <td><input type="radio" name="child_friendly" value="false"></td>
+      <td><input type="radio" name="child_friendly" value="t" <%= "checked" if @animal.child_friendly == "t"%>></td>
+      <td><input type="radio" name="child_friendly" value="f" <%= "checked" if @animal.child_friendly == "f"%>></td>
     </tr>
     <tr>
       <td><label for="needs_outside_space">Does the animal need space outside? </label></td>
-      <td><input type="radio" name="needs_outside_space" value="true"></td>
-      <td><input type="radio" name="needs_outside_space" value="false"></td>
+      <td><input type="radio" name="needs_outside_space" value="t" <%= "checked" if @animal.needs_outside_space == "t"%>></td>
+      <td><input type="radio" name="needs_outside_space" value="f" <%= "checked" if @animal.needs_outside_space == "f"%>></td>
     </tr>
     <tr>
       <td><label for="needs_exercise">Does the animal require plenty of exercise? </label></td>
-      <td><input type="radio" name="needs_exercise" value="true"></td>
-      <td><input type="radio" name="needs_exercise" value="false"></td>
+      <td><input type="radio" name="needs_exercise" value="t" <%= "checked" if @animal.needs_exercise == "t"%>></td>
+      <td><input type="radio" name="needs_exercise" value="f" <%= "checked" if @animal.needs_exercise == "f"%>></td>
     </tr>
   </table><br>
 

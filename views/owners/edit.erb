@@ -25,18 +25,18 @@
     </tr>
     <tr>
       <td><label for="has_children">Are they looking for a child friendly pet? </label></td>
-      <td><input type="radio" name="has_children" value="true" <%= "checked" if @has_children == "t" %>></td>
-      <td><input type="radio" name="has_children" value="false" <%= "checked" if @has_children == "f" %> ></td>
+      <td><input type="radio" name="has_children" value="t" <%= "checked" if @owner.has_children == "t" %>></td>
+      <td><input type="radio" name="has_children" value="f" <%= "checked" if @owner.has_children == "f" %> ></td>
     </tr>
     <tr>
       <td><label for="has_outside_space">Do they have an outdoor area for the animal? </label></td>
-      <td><input type="radio" name="has_outside_space" value="true"></td>
-      <td><input type="radio" name="has_outside_space" value="false"></td>
+      <td><input type="radio" name="has_outside_space" value="t" <%= "checked" if @owner.has_outside_space == "t" %>></td>
+      <td><input type="radio" name="has_outside_space" value="f" <%= "checked" if @owner.has_outside_space == "f" %>></td>
     </tr>
     <tr>
       <td><label for="likes_exercise">Are they looking for a animal that needs attention? </label></td>
-      <td><input type="radio" name="likes_exercise" value="true"></td>
-      <td><input type="radio" name="likes_exercise" value="false"></td>
+      <td><input type="radio" name="likes_exercise" value="t" <%= "checked" if @owner.likes_exercise == "t" %>></td>
+      <td><input type="radio" name="likes_exercise" value="f" <%= "checked" if @owner.likes_exercise == "f" %>></td>
     </tr>
   </table>
 
