@@ -162,13 +162,13 @@ animal7 = Animal.new({
   "name" => "Molly",
   "admission_date" => "12/02/19",
   "type" => "Cat",
-  "breed" => "British Shorthair",
+  "breed" => "Ragamuffin",
   "age" => "3",
   "status" => "Adopted",
   "child_friendly" => "true",
   "needs_outside_space" => "true",
   "needs_exercise" => "false",
-  "profile_pic" => "https://cdn1-www.cattime.com/assets/uploads/2011/12/file_2744_british-shorthair-460x290-460x290.jpg",
+  "profile_pic" => "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNSBoAsKB3uNqWkTiL6y_95O-CBNPzv3fQ_BsMDoRepNw5RTkO",
   "owner_id" => owner3.id
   })
 animal7.save()
