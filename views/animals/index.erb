@@ -5,7 +5,8 @@
 
 <div>
   <% for animal in @animals %>
-  <p><img class="polaroid-index" style="height: 200px;" src="<%= animal.profile_pic %>" ></p>
+  <br>
+  <img class="polaroid-index" align="left" style="height: 200px;" src="<%= animal.profile_pic %>" >
   <p>Name: <%= animal.name() %> </p>
   <p>Type: <%= animal.type %> </p>
   <p>Admission date: <%= animal.admission_date %></p>
@@ -15,7 +16,7 @@
   <input type="submit" value="View <%= animal.name %>'s Profile">
   </form>
 <br>
-
+<br><br><br><br>
 
 <hr>
 </div>

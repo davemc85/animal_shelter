@@ -2,6 +2,7 @@
   <h1>Animals that meet search criteria</h1>
   <% for animal in @animals do %>
   <div>
+    
     <p><img class="polaroid" style="width: 100px"src="<%= animal.profile_pic %>" ></p>
     <p>Name: <%= animal.name %> </p>
     <p>Type: <%= animal.type %> </p>
@@ -19,5 +20,5 @@
   <form action="/animals/search" method="get">
     <input type="submit" value="Search Again">
   </form>
-  
+
 </div>
