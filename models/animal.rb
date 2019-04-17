@@ -130,7 +130,7 @@ class Animal
 # search intended to return all dogs or cats etc
   def self.search(params)
     sql = "SELECT * FROM animals WHERE type=$1 OR breed=$1 OR name=$1"
-    values = [params[:type].capitalize]
+    values = [params[:name].capitalize]
     animals = SqlRunner.run(sql, values)
     result = animals.map{|animal| Animal.new(animal)}
     return result
